@@ -1,20 +1,20 @@
-import { ysfComponent } from './ysf.component';
+import { DBService } from './db.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { MyFirstComponent } from './my-first/my-first.component';
+import { YsfApiService } from './services/ysf-api.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ysfComponent
+    MyFirstComponent
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule
+    BrowserModule
   ],
-  providers: [],
+  providers: [DBService,YsfApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
