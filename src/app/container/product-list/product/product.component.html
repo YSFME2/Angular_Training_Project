@@ -1,0 +1,28 @@
+<div>
+  <div class="card">
+    <div class="card-header">
+      <div class="row">
+        <h2 class="col-auto">{{ product.Name }}</h2>
+        <h1 class="col">{{ product.Price }}</h1>
+      </div>
+    </div>
+    <div class="card-body">
+      <p>{{ product.Description }}</p>
+    </div>
+    <div class="card-footer">
+      <div class="row justify-content-between">
+        <p class="col">{{ product.Brand }}</p>
+        <button
+          class="btn btn-outline-secondary col-auto"
+          *ngIf="product.IsInStock; else outOfStock"
+        >
+          Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<ng-content select="h1"></ng-content>
+<ng-template #outOfStock>
+  <strong style="color: crimson; width: fit-content">OUT OF STOCK</strong>
+</ng-template>

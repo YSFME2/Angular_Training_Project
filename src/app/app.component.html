@@ -1,2 +1,4 @@
-
-<app-my-first>
+<div class="container my-3">
+  <app-search #searchComponent></app-search>
+  <app-product-list [searchText]="searchComponent.searchText"></app-product-list>
+</div>

@@ -1,0 +1,16 @@
+<div class="container mt-3">
+  <div class="row justify-content-around">
+    <div class="">
+      <div class="card">
+        <div [ngClass]="{'card-body':true}">
+          <h1 *ngIf="people.length > 1">Hello</h1>
+          <select title="jj" [ngClass]="{'form-select':true,'disabled':true}">
+            <option *ngFor="let item of people" [value]="item.Id" ngClass="" [ngStyle]="{background:item.Id%2 == 0?'grey':'white'}">
+              {{ item.Name }}
+            </option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

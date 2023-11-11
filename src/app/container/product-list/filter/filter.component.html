@@ -1,0 +1,29 @@
+<div class="check">
+  <input
+    title="all"
+    name="filter"
+    type="radio"
+    value="all"
+    [(ngModel)]="selectedFilter"
+    (change)="onSelectedFilterChanged()"
+  />
+  <span>{{ "All (" + allCount + ")" }}</span>
+  <input
+    title="In Stock"
+    name="filter"
+    type="radio"
+    value="true"
+    [(ngModel)]="selectedFilter"
+    (change)="onSelectedFilterChanged()"
+  />
+  <span>{{ "In Stock (" + inStockCount + ")" }}</span>
+  <input
+    title="Out of stock"
+    name="filter"
+    type="radio"
+    value="false"
+    [(ngModel)]="selectedFilter"
+    (change)="onSelectedFilterChanged()"
+  />
+  <span>{{ "Out of Stock (" + outOfStockCount + ")" }}</span>
+</div>

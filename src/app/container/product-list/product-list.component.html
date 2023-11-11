@@ -1,0 +1,17 @@
+<app-filter
+  [allCount]="allCount"
+  [inStockCount]="inStockCount"
+  [outOfStockCount]="outOfStockCount"
+  (selectedFilterChanged)="onSelectedFilterChabged($event)"
+>
+</app-filter>
+<div class="row justify-content-around">
+  <ng-container *ngFor="let prod of products"  >
+      <app-product class="col-sm-6 col-lg-4 p-2"
+                   [single-product]="prod"
+                   *ngIf="(selectedFilter === 'all' || selectedFilter === prod.IsInStock + '') && (searchText ==='' || prod.Name.toLowerCase().includes(searchText.toLowerCase()) )">
+                   <h1>{{prod.Name}} </h1>
+                   <h2>{{prod.Id}} </h2>
+               </app-product>
+  </ng-container>
+</div>

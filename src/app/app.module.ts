@@ -1,20 +1,22 @@
-import { DBService } from './db.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { MyFirstComponent } from './my-first/my-first.component';
-import { YsfApiService } from './services/ysf-api.service';
+import { HomeComponent } from './Home/home/home.component';
+import { AboutComponent } from './About/about/about.component';
+import { ContactComponent } from './Contant/contact/contact.component';
+import { FormsModule } from '@angular/forms';
+import { NgModel } from '@angular/forms';
+import { ProductListComponent } from './container/product-list/product-list.component';
+import { ProductComponent } from './container/product-list/product/product.component';
+import { FilterComponent } from './container/product-list/filter/filter.component';
+import { SearchComponent } from './container/search/search.component';
+import { ProductServices } from './Services/ProductServices';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    MyFirstComponent
-  ],
-  imports: [
-    BrowserModule
-  ],
-  providers: [DBService,YsfApiService],
-  bootstrap: [AppComponent]
+  declarations: [AppComponent, HomeComponent, AboutComponent, ContactComponent, ProductListComponent, ProductComponent, FilterComponent, SearchComponent],
+  imports: [BrowserModule, FormsModule,],
+  providers: [ProductServices],
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

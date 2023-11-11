@@ -1,0 +1,7 @@
+<div class="input-group mb-3">
+  <input type="text" class="form-control" #inputSearch placeholder="Search text" [(ngModel)]="searchText">
+  <button class="btn btn-secondary" (click)="OnSearchClicked()"  type="button" id="button-addon2">Search</button>
+</div>
+<div *ngIf="searchText">
+  <p>Results of searching for : {{searchText}}</p>
+</div>
