@@ -12,9 +12,10 @@ import { ProductComponent } from './container/product-list/product/product.compo
 import { FilterComponent } from './container/product-list/filter/filter.component';
 import { SearchComponent } from './container/search/search.component';
 import { ProductServices } from './Services/ProductServices';
+import { BtnStyleDirective } from './CustomDirectives/btn-style.directive';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, AboutComponent, ContactComponent, ProductListComponent, ProductComponent, FilterComponent, SearchComponent],
+  declarations: [AppComponent, HomeComponent, AboutComponent, ContactComponent, ProductListComponent, ProductComponent, FilterComponent, SearchComponent, BtnStyleDirective],
   imports: [BrowserModule, FormsModule,],
   providers: [ProductServices],
   bootstrap: [AppComponent],
